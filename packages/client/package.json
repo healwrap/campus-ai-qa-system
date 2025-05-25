@@ -1,5 +1,5 @@
 {
-	"name": "@healwrap/skyriver-editor-client",
+	"name": "@healwrap/campus-ai-qa-system-client",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -10,6 +10,10 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@healwrap/campus-ai-qa-system-common": "workspace:*",
+		"@ant-design/icons": "^5.3.2",
+		"antd": "^5.15.4",
+		"axios": "^1.6.8",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},

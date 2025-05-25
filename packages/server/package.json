@@ -1,5 +1,5 @@
 {
-  "name": "@healwrap/skyriver-editor-server",
+  "name": "@healwrap/campus-ai-qa-system-server",
   "version": "0.0.0",
   "description": "",
   "author": "",
@@ -20,6 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@healwrap/campus-ai-qa-system-common": "workspace:*",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",

@@ -1,16 +1,14 @@
 {
-	"name": "@healwrap/skyriver-editor",
+	"name": "@healwrap/campus-ai-qa-system",
 	"version": "1.0.0",
-	"description": "",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
-		"@healwrap/skyriver-editor-client": "workspace:*",
-		"@healwrap/skyriver-editor-common": "workspace:*",
-		"@healwrap/skyriver-editor-server": "workspace:*"
+		"@healwrap/campus-ai-qa-system-client": "workspace:*",
+		"@healwrap/campus-ai-qa-system-common": "workspace:*",
+		"@healwrap/campus-ai-qa-system-server": "workspace:*"
 	},
 	"keywords": [],
 	"author": "",
