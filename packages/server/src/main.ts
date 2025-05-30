@@ -1,9 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
+import { Logger } from 'nestjs-pino';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { bufferLogs: true });
+
+  // 使用 Pino logger
+  app.useLogger(app.get(Logger));
 
   // 启用 API 版本控制
   app.enableVersioning({
@@ -22,7 +26,9 @@ async function bootstrap() {
   );
 
   await app.listen(process.env.PORT ?? 3000);
-  console.log(`Application is running on: ${await app.getUrl()}`);
+
+  const logger = app.get(Logger);
+  logger.log(`Application is running on: ${await app.getUrl()}`);
 }
 
 bootstrap();

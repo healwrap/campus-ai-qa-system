@@ -1,9 +1,13 @@
 {
-  "name": "@healwrap/campus-ai-qa-system-common",
-  "version": "0.0.0",
-  "description": "前后端公用的类型、代码包",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "@healwrap/campus-ai-qa-system-common",
+	"version": "0.0.0",
+	"description": "前后端公用的类型、代码包",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"peerDependencies": {
+		"typescript": ">=4.0.0"
+	}
 }

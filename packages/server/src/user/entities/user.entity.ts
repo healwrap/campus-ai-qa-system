@@ -1,4 +1,6 @@
-export class User {
+import { User as IUser } from '@healwrap/campus-ai-qa-system-common';
+
+export class User implements IUser {
   id: number;
   email: string;
   username: string;

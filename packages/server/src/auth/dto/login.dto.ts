@@ -1,6 +1,7 @@
 import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
+import { LoginDto as ILoginDto } from '@healwrap/campus-ai-qa-system-common';
 
-export class LoginDto {
+export class LoginDto implements ILoginDto {
   @IsEmail({}, { message: '请提供有效的邮箱地址' })
   @IsNotEmpty({ message: '邮箱不能为空' })
   email: string;

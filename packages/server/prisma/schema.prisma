@@ -15,16 +15,17 @@ datasource db {
 }
 
 model User {
-  id         Int      @id @default(autoincrement())
-  email      String   @unique
+  id         Int           @id @default(autoincrement())
+  email      String        @unique
   username   String
   password   String
-  realName   String?  @map("real_name")
+  realName   String?       @map("real_name")
   gender     String?
   age        Int?
-  highSchool String?  @map("high_school")
-  createdAt  DateTime @default(now()) @map("created_at")
-  updatedAt  DateTime @updatedAt @map("updated_at")
+  highSchool String?       @map("high_school")
+  createdAt  DateTime      @default(now()) @map("created_at")
+  updatedAt  DateTime      @updatedAt @map("updated_at")
+  conversations Conversation[]
 
   @@map("users")
 }
@@ -38,4 +39,27 @@ model Admin {
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("admins")
+}
+
+model Conversation {
+  id          Int        @id @default(autoincrement())
+  title       String
+  userId      Int        @map("user_id")
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+  messages    Message[]
+
+  @@map("conversations")
+}
+
+model Message {
+  id             Int          @id @default(autoincrement())
+  conversationId Int          @map("conversation_id")
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  content        String       @db.Text
+  role           String       // 'user' or 'assistant'
+  createdAt      DateTime     @default(now()) @map("created_at")
+
+  @@map("messages")
 }
