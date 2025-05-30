@@ -3,8 +3,9 @@ import { effectScope, type EffectScope } from 'vue'
 const isSingletonKey = Symbol('isSingleton')
 
 interface Constructor<T> {
-  new (...args: unknown[]): T
   [isSingletonKey]?: boolean
+
+  new (...args: unknown[]): T
 }
 
 type InjectionKey<T> = symbol | { __type__: T }

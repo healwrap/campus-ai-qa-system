@@ -1,16 +1,16 @@
 {
-	"name": "@healwrap/campus-ai-qa-system",
-	"version": "1.0.0",
-	"main": "index.js",
-	"type": "module",
-	"scripts": {
-	},
-	"dependencies": {
-		"@healwrap/campus-ai-qa-system-client": "workspace:*",
-		"@healwrap/campus-ai-qa-system-common": "workspace:*",
-		"@healwrap/campus-ai-qa-system-server": "workspace:*"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+  "name": "@healwrap/campus-ai-qa-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  },
+  "dependencies": {
+    "@healwrap/campus-ai-qa-system-client": "workspace:*",
+    "@healwrap/campus-ai-qa-system-common": "workspace:*",
+    "@healwrap/campus-ai-qa-system-server": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
