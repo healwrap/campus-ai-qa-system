@@ -1,12 +1,11 @@
-import type { Message } from "./message.entity";
-import type { User } from "../../user/entity/user.entity";
+import { Message } from './message.entity'
+import { User } from '../../user/entity/user.entity'
 
-export interface Conversation {
-	id: number;
-	title: string;
-	userId: number;
-	user?: User;
-	createdAt: Date;
-	updatedAt: Date;
-	messages?: Message[];
+export class Conversation {
+  id: number
+  title: string
+  userId: number
+  createdAt: Date
+  updatedAt: Date
+  messages: Message[]
 }

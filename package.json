@@ -10,6 +10,10 @@
     "@healwrap/campus-ai-qa-system-common": "workspace:*",
     "@healwrap/campus-ai-qa-system-server": "workspace:*"
   },
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "eslint": "^9.18.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

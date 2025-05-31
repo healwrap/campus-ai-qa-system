@@ -1,8 +1,8 @@
-export interface Admin {
-	id: number;
-	email: string;
-	username: string;
-	password?: string; // Optional on client side
-	createdAt: Date;
-	updatedAt: Date;
+export class Admin {
+  id: number
+  email: string
+  username: string
+  password: string
+  createdAt: Date
+  updatedAt: Date
 }

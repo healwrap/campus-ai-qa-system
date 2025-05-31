@@ -1,13 +1,24 @@
 {
-	"name": "@healwrap/campus-ai-qa-system-common",
-	"version": "0.0.0",
-	"description": "前后端公用的类型、代码包",
-	"main": "src/index.ts",
-	"types": "src/index.ts",
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"peerDependencies": {
-		"typescript": ">=4.0.0"
-	}
+  "name": "@healwrap/campus-ai-qa-system-common",
+  "version": "0.0.0",
+  "description": "前后端公用的类型、代码包",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.0.0",
+    "class-validator": ">=0.14.2",
+    "@nestjs/mapped-types": ">=2.1.0"
+  },
+  "devDependencies": {
+    "tsup": "8.5.0",
+    "prettier": "3.5.3"
+  }
 }
